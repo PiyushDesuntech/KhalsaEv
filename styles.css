@@ -451,6 +451,9 @@
         pointer-events: none; 
         border-radius: 0px 0px 40px 40px;
     }
+    .input-divider {
+        display: none;
+    }
 }
 
 /* Extra small screens */
