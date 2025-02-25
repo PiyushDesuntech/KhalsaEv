@@ -223,11 +223,31 @@
 }
 
 .callback-form * {
-    transform: skew(6.5deg); 
+    transform: skew(6.5deg);
+}
+
+/* Added code for input dividers */
+.form-field-container {
+    position: relative;
+}
+
+.input-divider {
+    position: absolute;
+    top: 0%;
+    right: 0;
+    height: 80%;
+    width: 1px;
+    background-color: #273C66;
+    margin-left: 5px;
+}
+
+/* Make the last divider invisible if needed */
+.form-field-container:last-of-type .input-divider {
+    display: none;
 }
 
 .callback-form button {
-    height: 45px;
+    height: 35px;
     background-color: #04A652;
     border: #04A652;
 }
@@ -269,7 +289,7 @@
 
 .form-control {
     margin-bottom: 15px;
-    padding: 10px;
+    padding: 5px;
     border: 1px solid #ddd;
 }
 
@@ -414,7 +434,6 @@
     }
     .callback-form * {
         transform: none; 
-        background: white;
     }
  
  
