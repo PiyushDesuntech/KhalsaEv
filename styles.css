@@ -305,7 +305,7 @@
 /* 2nd component */
 
 .feature-card {
-    padding: 20px;
+    /* padding: 20px; */
     margin-bottom: 20px;
     transition: transform 0.3s ease;
     display: flex;
@@ -321,6 +321,11 @@
     width: 50px;
     height: 50px;
     margin-bottom: 15px;
+}
+.featureMainTitle {
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 20px;
 }
 
 .feature-title {
@@ -454,6 +459,10 @@
     .input-divider {
         display: none;
     }
+    .featureMainTitle {
+        font-size: 40px;
+        text-align: center;
+    }
 }
 
 /* Extra small screens */
@@ -477,6 +486,9 @@
     }
     .hero-section {
         padding-bottom: 10px;
+    }
+    .featureMainTitle {
+        font-size: 30px;
     }
 }
 
