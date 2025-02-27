@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electric Rickshaw Catalog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js"></script>
+    <link rel="stylesheet" href="/productDetails.css">
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="container">
+            <div
+                class="d-flex flex-column flex-sm-row justify-content-between align-items-center text-center text-sm-start">
+                <img src="./images/NavBG.svg" alt="nav" class="nav-bg">
+                <div class="social-icons1 d-flex gap-2">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <div
+                    class="text-white mt-sm-0 mx-auto text-center d-none d-sm-block position-absolute start-50 translate-middle-x">
+                    Eco-Friendly Battery Operated E-Vehicle</div>
+                <div class="text-white mt-1 mx-auto text-center d-block d-sm-none">Eco-Friendly Battery Operated
+                    E-Vehicle</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <div class="drawerContainer">
+                <a class="navbar-brand" href="/">
+                    <img src="./images/Logo.svg" alt="Khalsa Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse flex-grow-0" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/about.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/products.html">Products</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/gallery.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/distributors.html">Distributors</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/contactus.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="navbarHomeIcon">
+                    <img src="./images/logoBG.svg" alt="BG" class="logoBG">
+                    <button class="icon-btn">
+                        <span class="iconify" data-icon="mdi:cart-outline"></span>
+                    </button>
+                    <button class="icon-btn">
+                        <span class="iconify" data-icon="material-symbols:search"></span>
+                    </button>
+                    <button class="icon-btn">
+                        <span class="iconify" data-icon="material-symbols-light:menu"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-container">
+                <div>
+                    <h1 class="mission-title">Luka R2 Green</h1>
+                <h6>Products <i class="fa-solid fa-arrow-right-long"></i> <span
+                        style="text-decoration: underline; color: #CAEBD0;">Luka R2 Green</span></h6>
+                </div>
+                <div style="padding: 20px;">
+                    <img src="/productsImage/LukaBlue.svg" alt="Luka Blue" class="img-fluid">
+                </div>
+            </div>
+            <a href="/product-details2.html">
+                <button class="prev-button"><i class="fa-solid fa-arrow-left-long"></i></button>
+            </a>
+            <a href="/product-details4.html">
+                <button class="next-button">
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                </button>
+            </a>
+        </div>
+    </section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="product-title">LUKA R2</h1>
+                        <div class="product-color">Green</div>
+
+                        <div class="main-image-container">
+                            <img src="/productsImage/LukaBlue.svg" alt="Luka r2 Green Auto Rickshaw" class="img-fluid">
+                        </div>
+
+                        <div class="thumbnail-container">
+                            <div class="thumbnail">
+                                <img src="/productsImage/lukaLeft.svg" alt="LUKA R2 Front View" class="img-fluid">
+                            </div>
+                            <div class="thumbnail">
+                                <img src="/productsImage/lukaSide.svg" alt="LUKA R2 Side View" class="img-fluid">
+                            </div>
+                            <div class="thumbnail">
+                                <img src="/productsImage/lukaBack.svg" alt="LUKA R2 Back View" class="img-fluid">
+                            </div>
+                            <div class="thumbnail">
+                                <img src="/productsImage/lukaFront.svg" alt="LUKA R2 Rear View" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-container">
+                            <h2 class="form-title">PRODUCT ENQUIRY</h2>
+
+                            <div class="availability-info">
+                                Available from <span class="time-highlight">7am to 9pm</span> Eastern Time,
+                                <span class="days-highlight">7 days</span> a week,
+                                <span class="days-highlight">365 days</span> a year.
+                                If you reach out after hours, we'll get back to you as soon as we can.
+                            </div>
+
+                            <form id="enquiryForm" novalidate>
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label for="firstName" class="form-label">First Name</label>
+                                        <input type="text" class="form-control" id="firstName"
+                                            placeholder="Enter Your First Name" required>
+                                        <div class="invalid-feedback">Please enter your first name.</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="lastName" class="form-label">Last Name</label>
+                                        <input type="text" class="form-control" id="lastName"
+                                            placeholder="Enter Your Last Name" required>
+                                        <div class="invalid-feedback">Please enter your last name.</div>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email"
+                                            placeholder="Enter Your Email Address" required>
+                                        <div class="invalid-feedback">Please enter a valid email address.</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="phoneNumber" class="form-label">Phone Number</label>
+                                        <input type="tel" class="form-control" id="phoneNumber"
+                                            placeholder="Enter Your Phone Number" required>
+                                        <div class="invalid-feedback">Please enter a valid phone number.</div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" rows="5"
+                                        placeholder="Enter Your Message Here..." required></textarea>
+                                    <div class="invalid-feedback">Please enter your message.</div>
+                                </div>
+
+                                <div class="text-end">
+                                    <button type="submit" class="btn btn-success send-btn">Send Message</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="row">
+                    <div class="col-12 details">
+                        <p>Experience a smooth and eco-friendly ride with Khalsa E-Vehicles' electric rickshaws.
+                            Designed with premium-quality materials and advanced technology, our e-rickshaws ensure
+                            safety, durability, and ease of use for both drivers and passengers. With low operating
+                            costs and a spacious design, they can comfortably accommodate 3+1 passengers, making them
+                            the ideal choice for urban and commercial transport. Switch to sustainability with Khalsa EV
+                            – Reliable, Efficient, and Affordable!</p>
+                    </div>
+                    <div class="col-12">
+                        <div class="imageTag">
+                            <img src="/productsImage/tech.svg" alt="Tech. Solutions" class="img-fluid">
+                        </div>
+                        <table class="specs-table">
+                            <tbody>
+                                <tr>
+                                    <td>TSF</td>
+                                    <td>Luka R2</td>
+                                </tr>
+                                <tr>
+                                    <td>Emission Standards</td>
+                                    <td>Zero Emission</td>
+                                </tr>
+                                <tr>
+                                    <td>Seating Capacity</td>
+                                    <td>3+1</td>
+                                </tr>
+                                <tr>
+                                    <td>Brakes</td>
+                                    <td>Drum</td>
+                                </tr>
+                                <tr>
+                                    <td>Suspension</td>
+                                    <td>Front: Hydraulic Telescopic; Rear: Leaf Spring</td>
+                                </tr>
+                                <tr>
+                                    <td>Driving Mode</td>
+                                    <td>Electric Steering</td>
+                                </tr>
+                                <tr>
+                                    <td>Battery</td>
+                                    <td>Lithium-Ion 12.2 kWh</td>
+                                </tr>
+                                <tr>
+                                    <td>Starting System</td>
+                                    <td>Electric Push Button</td>
+                                </tr>
+                                <tr>
+                                    <td>Fuel Used</td>
+                                    <td>Electric</td>
+                                </tr>
+                                <tr>
+                                    <td>Range</td>
+                                    <td>172 Km per charge</td>
+                                </tr>
+                                <tr>
+                                    <td>Charging Time</td>
+                                    <td>4-5 Hours</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-12">
+                        <div class="imageTag">
+                            <img src="/productsImage/engine.svg" alt="Engine" class="img-fluid">
+                        </div>
+                        <table class="specs-table">
+                            <tbody>
+                                <tr>
+                                    <td>Peak Power Output</td>
+                                    <td>7.5 kW</td>
+                                </tr>
+                                <tr>
+                                    <td>Max Torque</td>
+                                    <td>35 Nm</td>
+                                </tr>
+                                <tr>
+                                    <td>Max RPM</td>
+                                    <td>4000 RPM</td>
+                                </tr>
+                                <tr>
+                                    <td>Max Speed</td>
+                                    <td>50 Kmph</td>
+                                </tr>
+                                <tr>
+                                    <td>Engine Type</td>
+                                    <td>Electric BLDC Motor</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-12">
+                        <div class="imageTag">
+                            <img src="/productsImage/clutch.svg" alt="Clutch and Gear" class="img-fluid">
+                        </div>
+                        <table class="specs-table">
+                            <tbody>
+                                <tr>
+                                    <td>Gear Box</td>
+                                    <td>Automatic Transmission</td>
+                                </tr>
+                                <tr>
+                                    <td>Clutch</td>
+                                    <td>Not Applicable (Direct Drive)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-12">
+                        <div class="imageTag">
+                            <img src="/productsImage/mass.svg" alt="Mass" class="img-fluid">
+                        </div>
+                        <table class="specs-table">
+                            <tbody>
+                                <tr>
+                                    <td>Kerb Weight</td>
+                                    <td>430 Kg</td>
+                                </tr>
+                                <tr>
+                                    <td>Gross Vehicle Weight</td>
+                                    <td>750 Kg</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-12">
+                        <div class="imageTag">
+                            <img src="/productsImage/dimension.svg" alt="Dimension" class="img-fluid">
+                        </div>
+                        <table class="specs-table">
+                            <tbody>
+                                <tr>
+                                    <td>Min. Ground Clearness</td>
+                                    <td>140 mm</td>
+                                </tr>
+                                <tr>
+                                    <td>GWheel base</td>
+                                    <td>2050 mm</td>
+                                </tr>
+                                <tr>
+                                    <td>Rear Wheel Track</td>
+                                    <td>1250 mm</td>
+                                </tr>
+                                <tr>
+                                    <td>Overall Length</td>
+                                    <td>2900 mm</td>
+                                </tr>
+                                <tr>
+                                    <td>Overall Width</td>
+                                    <td>1350 mm</td>
+                                </tr>
+                                <tr>
+                                    <td>Overall Height</td>
+                                    <td>1900 mm</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="partners-section">
+        <div class="container" style="max-width: 1400px;">
+            <h2 class="product-title">Our Partners</h2>
+            <div class="row justify-content-center align-items-center">
+                <div class="col-6 col-md-4 col-xl-2">
+                    <div class="partner-item">
+                        <img src="./images/forsee.svg" alt="Forsee Power" class="partner-logo">
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-xl-2">
+                    <div class="partner-item">
+                        <img src="./images/lightning.svg" alt="Lightning Logistics" class="partner-logo">
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-xl-2">
+                    <div class="partner-item">
+                        <img src="./images/sun.svg" alt="Sun Mobility" class="partner-logo">
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-xl-2">
+                    <div class="partner-item">
+                        <img src="./images/valeo.svg" alt="Valeo" class="partner-logo">
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-xl-2">
+                    <div class="partner-item">
+                        <img src="./images/apml.png" alt="APML" class="partner-logo">
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-xl-2">
+                    <div class="partner-item">
+                        <img src="./images/axis.svg" alt="Axis Bank" class="partner-logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer mt-4">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <ul>
+                        <img src="./images/logo2.svg" alt="Khalsa Logo" class="footer-logo">
+                        <li><a href="#">To provide a battery-run rickshaw, a low-emitter complementary transport for the
+                                low-income people, who suffer most from a lack of transport facility.</a></li>
+                        <li><a href="#"><i class="fa-solid fa-location-dot"></i> 366, 2/7, Roorkee Rd, Rampuri,
+                                Muzaffarnagar</a></li>
+                        <li><a href="tel:+919917917007"><i class="fa-solid fa-phone"></i> +91 9917917007</a></li>
+                        <li><a href="mailto:info@khalsaev.com"><i class="fa-solid fa-envelope"></i>
+                                info@khalsaev.com</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/products.html">Products</a></li>
+                        <li><a href="/gallery.html">Gallery</a></li>
+                        <li><a href="/distributors.html">Distributors</a></li>
+                        <li><a href="/contactus.html">Contacts</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Products</h3>
+                    <ul>
+                        <li><a href="#">Grand L5 Khalsa</a></li>
+                        <li><a href="#">Plus SS Khalsa Plus</a></li>
+                        <li><a href="#">MS Khalsa Regular</a></li>
+                        <li><a href="#">SS Khalsa Regular</a></li>
+                        <li><a href="#">MS Khalsa Loader</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Warehouse</h3>
+                    <ul>
+                        <li><a href="#"> Patna (Bihar & Jharkhand)</a></li>
+                        <li><a href="#"> Kashipur (Uttarakhand)</a></li>
+                        <li><a href="#"> Barnala (Punjab & Chandigarh)</a></li>
+                        <li><a href="#"> Guwahati ( Assam & Tripura)</a></li>
+                        <li><a href="#"> Nagpur (Maharashtra)</a></li>
+                        <li><a href="#"> Lucknow (East UP)</a></li>
+                        <li><a href="#"> Bhopal (MP & Chhattisgarh)</a></li>
+                        <li><a href="#"> Karnataka (South Region)</a></li>
+                        <li><a href="#"> Jaipur (Rajasthan)</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="linkContainer">
+                <div class="footer-bottom-text">
+                    <p>Copyright © 2025 KhalsaEV</p>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#">Terms & Condition</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Refund Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/productDetails.js"></script>
+</body>
+
+</html>

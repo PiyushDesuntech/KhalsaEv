@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electric Rickshaw Catalog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .card {
+            border: none;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-img-container {
+            height: 220px;
+            overflow: hidden;
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+        }
+        
+        .card-img-container img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+        }
+        
+        .card-footer {
+            background-color: #00c853;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .card-footer:hover {
+            background-color: #009624;
+        }
+        
+        .pagination {
+            justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+            text-align: center;
+            padding-top: 30px;
+        }
+        
+        /* Custom pagination styling - applied to ALL buttons */
+        .custom-pagination .page-item .page-link {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 5px;
+            border: none;
+            color: #00c853;
+            transition: all 0.3s ease;
+        }
+        
+        /* Active state for all buttons */
+        .custom-pagination .page-item.active .page-link {
+            background-color: #00c853;
+            border-color: #00c853;
+            color: white;
+        }
+        
+        /* Hover state for all buttons */
+        .custom-pagination .page-item .page-link:hover:not(.disabled) {
+            background-color: #e9f9ef;
+        }
+        
+        /* Disabled state styling */
+        .custom-pagination .page-item.disabled .page-link {
+            background-color: #f8f9fa;
+            color: #c0c0c0;
+            cursor: not-allowed;
+        }
+
+        /* Modal styling */
+        .modal-header {
+            background-color: #00c853;
+            color: white;
+        }
+        
+        .modal-product-img {
+            max-height: 250px;
+            margin: 0 auto;
+            display: block;
+        }
+        
+        .feature-list {
+            padding-left: 20px;
+        }
+        
+        .feature-list li {
+            margin-bottom: 8px;
+        }
+        
+        .price-tag {
+            font-size: 24px;
+            font-weight: bold;
+            color: #00c853;
+        }
+        
+        .btn-primary {
+            background-color: #00c853;
+            border-color: #00c853;
+        }
+        
+        .btn-primary:hover {
+            background-color: #009624;
+            border-color: #009624;
+        }
+        
+        .btn-outline-secondary {
+            color: #00c853;
+            border-color: #00c853;
+        }
+        
+        .btn-outline-secondary:hover {
+            background-color: #00c853;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4 mb-4">Electric Rickshaw Catalog</h1>
+        
+        <div class="row" id="rickshaw-container">
+            <!-- Cards will be dynamically populated here -->
+        </div>
+        
+        <nav aria-label="Rickshaw pagination">
+            <ul class="pagination custom-pagination" id="pagination">
+                <!-- Pagination will be dynamically populated here -->
+            </ul>
+        </nav>
+    </div>
+    
+    <!-- Product Detail Modal -->
+    <div class="modal fade" id="productDetailModal" tabindex="-1" aria-labelledby="productDetailModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productDetailModalLabel">Product Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="productDetailContent">
+                    <!-- Product details will be dynamically inserted here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Rickshaw product data with extended details
+        const rickshaws = [
+            {
+                id: 1,
+                name: "LUKA R2 PINK",
+                image: "https://via.placeholder.com/400x300/ff69b4/ffffff?text=LUKA+R2+PINK",
+                price: "$1,899",
+                description: "The LUKA R2 in vibrant pink combines style with practicality. This electric rickshaw offers excellent performance for city commutes.",
+                features: ["60 km range on full charge", "Max speed: 25 km/h", "Loading capacity: 400 kg", "Regenerative braking system", "Solar panel option available"],
+                specifications: {
+                    motor: "1000W BLDC Motor",
+                    battery: "48V 100Ah Lithium-ion",
+                    charging: "4-6 hours full charge",
+                    warranty: "2 years on battery, 3 years on motor"
+                }
+            },
+            {
+                id: 2,
+                name: "LUKA R2 BLUE",
+                image: "https://via.placeholder.com/400x300/00bfff/ffffff?text=LUKA+R2+BLUE",
+                price: "$1,899",
+                description: "The LUKA R2 in calming blue is perfect for urban transportation with enhanced comfort and reliability.",
+                features: ["60 km range on full charge", "Max speed: 25 km/h", "Loading capacity: 400 kg", "Regenerative braking system", "Solar panel option available"],
+                specifications: {
+                    motor: "1000W BLDC Motor",
+                    battery: "48V 100Ah Lithium-ion",
+                    charging: "4-6 hours full charge",
+                    warranty: "2 years on battery, 3 years on motor"
+                }
+            },
+            {
+                id: 3,
+                name: "LUKA R2 GREEN",
+                image: "https://via.placeholder.com/400x300/32cd32/ffffff?text=LUKA+R2+GREEN",
+                price: "$1,899",
+                description: "The LUKA R2 in eco-friendly green symbolizes sustainable transportation with zero emissions.",
+                features: ["60 km range on full charge", "Max speed: 25 km/h", "Loading capacity: 400 kg", "Regenerative braking system", "Solar panel option available"],
+                specifications: {
+                    motor: "1000W BLDC Motor",
+                    battery: "48V 100Ah Lithium-ion",
+                    charging: "4-6 hours full charge",
+                    warranty: "2 years on battery, 3 years on motor"
+                }
+            },
+            {
+                id: 4,
+                name: "LUKA R2 YELLOW",
+                image: "https://via.placeholder.com/400x300/ffd700/ffffff?text=LUKA+R2+YELLOW",
+                price: "$1,899",
+                description: "The LUKA R2 in bright yellow offers high visibility and the same great performance as the entire R2 lineup.",
+                features: ["60 km range on full charge", "Max speed: 25 km/h", "Loading capacity: 400 kg", "Regenerative braking system", "Solar panel option available"],
+                specifications: {
+                    motor: "1000W BLDC Motor",
+                    battery: "48V 100Ah Lithium-ion",
+                    charging: "4-6 hours full charge",
+                    warranty: "2 years on battery, 3 years on motor"
+                }
+            },
+            {
+                id: 5,
+                name: "LUKA R2 WHITE",
+                image: "https://via.placeholder.com/400x300/ffffff/333333?text=LUKA+R2+WHITE",
+                price: "$1,899",
+                description: "The LUKA R2 in elegant white provides a clean, professional look with all the performance benefits of the R2 series.",
+                features: ["60 km range on full charge", "Max speed: 25 km/h", "Loading capacity: 400 kg", "Regenerative braking system", "Solar panel option available"],
+                specifications: {
+                    motor: "1000W BLDC Motor",
+                    battery: "48V 100Ah Lithium-ion",
+                    charging: "4-6 hours full charge",
+                    warranty: "2 years on battery, 3 years on motor"
+                }
+            },
+            {
+                id: 6,
+                name: "KHALSA GRAND LITHIUM",
+                image: "https://via.placeholder.com/400x300/87ceeb/ffffff?text=KHALSA+GRAND+LITHIUM",
+                price: "$2,499",
+                description: "The KHALSA GRAND LITHIUM is our premium model with enhanced features and luxury design elements.",
+                features: ["80 km range on full charge", "Max speed: 30 km/h", "Loading capacity: 500 kg", "Advanced suspension system", "Digital dashboard with GPS", "Bluetooth connectivity"],
+                specifications: {
+                    motor: "1200W BLDC Motor",
+                    battery: "60V 120Ah Lithium-ion",
+                    charging: "4-5 hours full charge",
+                    warranty: "3 years on battery, 4 years on motor"
+                }
+            },
+            {
+                id: 7,
+                name: "KHALSA HD LOADER EV 2",
+                image: "https://via.placeholder.com/400x300/4169e1/ffffff?text=KHALSA+HD+LOADER+EV+2",
+                price: "$2,299",
+                description: "The KHALSA HD LOADER EV 2 is designed specifically for heavy cargo transportation with reinforced chassis.",
+                features: ["70 km range on full charge", "Max speed: 25 km/h", "Loading capacity: 650 kg", "Heavy-duty suspension", "Extended cargo area", "Anti-theft system"],
+                specifications: {
+                    motor: "1500W BLDC Motor",
+                    battery: "60V 100Ah Lithium-ion",
+                    charging: "5-7 hours full charge",
+                    warranty: "2 years on battery, 3 years on motor"
+                }
+            },
+            {
+                id: 8,
+                name: "KHALSA PRO+",
+                image: "https://via.placeholder.com/400x300/4682b4/ffffff?text=KHALSA+PRO+",
+                price: "$2,199",
+                description: "The KHALSA PRO+ offers the perfect balance between passenger comfort and cargo capacity for commercial use.",
+                features: ["75 km range on full charge", "Max speed: 28 km/h", "Loading capacity: 550 kg", "Comfortable passenger seating", "Weather protection canopy", "LED lighting system"],
+                specifications: {
+                    motor: "1200W BLDC Motor",
+                    battery: "48V 120Ah Lithium-ion",
+                    charging: "4-6 hours full charge",
+                    warranty: "2 years on battery, 3 years on motor"
+                }
+            },
+            {
+                id: 9,
+                name: "ECO RIDER X1",
+                image: "https://via.placeholder.com/400x300/ff4500/ffffff?text=ECO+RIDER+X1",
+                price: "$1,799",
+                description: "The ECO RIDER X1 is our most affordable model without compromising on quality or performance.",
+                features: ["55 km range on full charge", "Max speed: 22 km/h", "Loading capacity: 350 kg", "Basic digital display", "Economical design", "Low maintenance"],
+                specifications: {
+                    motor: "800W BLDC Motor",
+                    battery: "48V 80Ah Lithium-ion",
+                    charging: "5-7 hours full charge",
+                    warranty: "1 year on battery, 2 years on motor"
+                }
+            },
+            {
+                id: 10,
+                name: "GREEN MOVER",
+                image: "https://via.placeholder.com/400x300/2e8b57/ffffff?text=GREEN+MOVER",
+                price: "$2,099",
+                description: "The GREEN MOVER features solar panels to extend battery life and maximize eco-friendly operation.",
+                features: ["65 km range on full charge", "Solar extended range", "Max speed: 25 km/h", "Loading capacity: 400 kg", "Roof-mounted solar panel", "Energy monitoring system"],
+                specifications: {
+                    motor: "1000W BLDC Motor",
+                    battery: "48V 100Ah Lithium-ion",
+                    charging: "4-6 hours full charge + solar",
+                    warranty: "2 years on battery, 3 years on motor"
+                }
+            },
+            {
+                id: 11,
+                name: "CITY CRUISER",
+                image: "https://via.placeholder.com/400x300/9932cc/ffffff?text=CITY+CRUISER",
+                price: "$1,999",
+                description: "The CITY CRUISER is designed for urban passenger transportation with focus on comfort and style.",
+                features: ["60 km range on full charge", "Max speed: 25 km/h", "Passenger capacity: 4", "Comfortable cushioned seats", "Entertainment system", "USB charging ports"],
+                specifications: {
+                    motor: "1000W BLDC Motor",
+                    battery: "48V 100Ah Lithium-ion",
+                    charging: "4-6 hours full charge",
+                    warranty: "2 years on battery, 3 years on motor"
+                }
+            },
+            {
+                id: 12,
+                name: "URBAN TRANSPORTER",
+                image: "https://via.placeholder.com/400x300/1e90ff/ffffff?text=URBAN+TRANSPORTER",
+                price: "$2,199",
+                description: "The URBAN TRANSPORTER combines passenger and cargo capacity for versatile city use.",
+                features: ["70 km range on full charge", "Max speed: 28 km/h", "Mixed capacity: 2 passengers + cargo", "Modular design", "Quick-switch cargo configuration", "All-weather protection"],
+                specifications: {
+                    motor: "1200W BLDC Motor",
+                    battery: "48V 110Ah Lithium-ion",
+                    charging: "4-5 hours full charge",
+                    warranty: "2 years on battery, 3 years on motor"
+                }
+            }
+        ];
+        
+        // Pagination configuration
+        const itemsPerPage = 6;
+        let currentPage = 1;
+        
+        // Function to display rickshaws for the current page
+        function displayRickshaws() {
+            const container = document.getElementById('rickshaw-container');
+            container.innerHTML = '';
+            
+            // Calculate starting and ending indices for the current page
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const endIndex = Math.min(startIndex + itemsPerPage, rickshaws.length);
+            
+            // Display rickshaws for the current page
+            for (let i = startIndex; i < endIndex; i++) {
+                const rickshaw = rickshaws[i];
+                
+                const col = document.createElement('div');
+                col.className = 'col-12 col-sm-6 col-lg-4';
+                
+                col.innerHTML = `
+                    <div class="card">
+                        <div class="card-img-container">
+                            <img src="${rickshaw.image}" alt="${rickshaw.name}">
+                        </div>
+                        <div class="card-footer" data-id="${rickshaw.id}">
+                            ${rickshaw.name}
+                        </div>
+                    </div>
+                `;
+                
+                container.appendChild(col);
+            }
+            
+            // Add click event listeners to card footers
+            document.querySelectorAll('.card-footer').forEach(footer => {
+                footer.addEventListener('click', function() {
+                    const productId = parseInt(this.getAttribute('data-id'));
+                    openProductDetail(productId);
+                });
+            });
+            
+            // Update pagination
+            updatePagination();
+        }
+        
+        // Function to update pagination controls
+        function updatePagination() {
+            const pagination = document.getElementById('pagination');
+            pagination.innerHTML = '';
+            
+            // Calculate total number of pages
+            const totalPages = Math.ceil(rickshaws.length / itemsPerPage);
+            
+            // Previous button with Font Awesome icon
+            const prevLi = document.createElement('li');
+            prevLi.className = `page-item ${currentPage === 1 ? 'disabled' : ''}`;
+            prevLi.innerHTML = `<a class="page-link" href="#" aria-label="Previous"><i class="fas fa-chevron-left"></i></a>`;
+            prevLi.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (currentPage > 1) {
+                    currentPage--;
+                    displayRickshaws();
+                    window.scrollTo(0, 0);
+                }
+            });
+            pagination.appendChild(prevLi);
+            
+            // Page number buttons
+            for (let i = 1; i <= totalPages; i++) {
+                const li = document.createElement('li');
+                li.className = `page-item ${i === currentPage ? 'active' : ''}`;
+                li.innerHTML = `<a class="page-link" href="#">${i}</a>`;
+                li.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    currentPage = i;
+                    displayRickshaws();
+                    window.scrollTo(0, 0);
+                });
+                pagination.appendChild(li);
+            }
+            
+            // Next button with Font Awesome icon
+            const nextLi = document.createElement('li');
+            nextLi.className = `page-item ${currentPage === totalPages ? 'disabled' : ''}`;
+            nextLi.innerHTML = `<a class="page-link" href="#" aria-label="Next"><i class="fas fa-chevron-right"></i></a>`;
+            nextLi.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    displayRickshaws();
+                    window.scrollTo(0, 0);
+                }
+            });
+            pagination.appendChild(nextLi);
+        }
+        
+        // Function to open product detail modal
+        function openProductDetail(productId) {
+            const product = rickshaws.find(r => r.id === productId);
+            if (!product) return;
+            
+            // Get the modal elements
+            const modal = new bootstrap.Modal(document.getElementById('productDetailModal'));
+            const modalTitle = document.getElementById('productDetailModalLabel');
+            const modalContent = document.getElementById('productDetailContent');
+            
+            // Set modal title
+            modalTitle.textContent = product.name;
+            
+            // Generate the content
+            let featuresHtml = '';
+            product.features.forEach(feature => {
+                featuresHtml += `<li>${feature}</li>`;
+            });
+            
+            // Set modal content
+            modalContent.innerHTML = `
+                <div class="row">
+                    <div class="col-md-5">
+                        <img src="${product.image}" alt="${product.name}" class="img-fluid modal-product-img mb-3">
+                        <div class="price-tag mb-3">${product.price}</div>
+                        <div class="d-grid">
+                            <button class="btn btn-primary">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <h5>Description</h5>
+                        <p>${product.description}</p>
+                        
+                        <h5>Key Features</h5>
+                        <ul class="feature-list">
+                            ${featuresHtml}
+                        </ul>
+                        
+                        <h5>Technical Specifications</h5>
+                        <table class="table table-striped">
+                            <tbody>
+                                <tr>
+                                    <td>Motor</td>
+                                    <td>${product.specifications.motor}</td>
+                                </tr>
+                                <tr>
+                                    <td>Battery</td>
+                                    <td>${product.specifications.battery}</td>
+                                </tr>
+                                <tr>
+                                    <td>Charging Time</td>
+                                    <td>${product.specifications.charging}</td>
+                                </tr>
+                                <tr>
+                                    <td>Warranty</td>
+                                    <td>${product.specifications.warranty}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            `;
+            
+            // Show the modal
+            modal.show();
+        }
+        
+        // Initialize the display
+        document.addEventListener('DOMContentLoaded', function() {
+            displayRickshaws();
+        });
+    </script>
+</body>
+</html>

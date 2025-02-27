@@ -86,7 +86,7 @@
     border-radius: 0px 0px 50px 50px;
 }
 .hero {
-    background-image: url(./galleryImages/galleryBG.svg);
+    background-image: url(./images/contactBG.svg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -98,6 +98,8 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
 }
 .aboutCompany {
     padding: 30px 0px;
@@ -170,397 +172,62 @@
     }
 }
 
-.vehicle-image {
-    max-width: 100%;
-    height: auto;
-}
 
-.feature-card {
-    /* padding: 20px; */
-    margin-bottom: 20px;
-    transition: transform 0.3s ease;
-    display: flex;
-    gap: 10px
-    
-}
-
-.feature-card:hover {
-    transform: translateY(-5px);
-}
-
-.feature-icon {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 15px;
-}
-.featureMainTitle {
-    font-size: 60px;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-.feature-title {
-    color: #2046b3;
-    font-weight: 600;
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.feature-description {
-    color: #666;
-    font-size: 0.9rem;
-    line-height: 1.5;
-}
-
-.marketplace-container {
-    padding: 30px 15px;
-}
-
-
-
-/* Small screens (mobile devices) */
-@media (max-width: 768px) {
-    .nav-bg{
-        display: none;
-    }
-    .social-icons1 {
-        display: block;
-    }
-    .logoBG {
-        display: none;
-    }
-    .navbarHomeIcon {
-        display: none;
-    }
-    .hero-background {
-        background-size: cover;
-    }
-    .hero-background::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: none;
-        pointer-events: none; 
-        border-radius: 0px 0px 40px 40px;
-    }
-    .input-divider {
-        display: none;
-    }
-    .featureMainTitle {
-        font-size: 40px;
-        text-align: center;
-    }
-}
-
-/* Extra small screens */
-@media (max-width: 480px) {
-    .spec-label {
-        font-size: 16px;
-    }
-
-    .spec-value {
-        font-size: 12px;
-    }
-    .marketplace-container {
-        padding:10px;
-    }
-    .feature-card {
-        padding: 10px;
-        margin-bottom: 0px;
-    }
-    .hero-section {
-        padding-bottom: 10px;
-    }
-    .featureMainTitle {
-        font-size: 30px;
-    }
-}
-
-
-.product-title {
-    text-align: center;
-    font-weight: 700;
-    color: #000000;
-    font-size: 60px; 
-    margin-bottom: 20px;
-}
 .mission-title {
     font-weight: 700;
     font-size: 60px; 
     margin-bottom: 20px; 
-    color: #FFFFFF;
 }
 
-
-/* Medium screens (tablets) */
 
 @media (max-width: 992px) {
-    .product-title {
-        font-size: 50px;
-    }
     .mission-title  {
         font-size: 50px;
     }
-
 }
 
-/* Small screens (phones) */
 @media (max-width: 768px) {
-    .product-title {
-        font-size: 40px;
-        margin-bottom: 10px;
-    }
     .mission-title  {
         font-size: 40px;
         margin-bottom: 10px;
     }
 }
 
-
-/* Extra small screens */
 @media (max-width: 576px) {
-    .product-title {
-        font-size: 30px;
-        margin-bottom: 0px;
-    }
     .mission-title  {
         font-size: 30px;
         margin-bottom: 0px;
     }
 }
 
-/* Slider */
-.gallerySlider {
-    background-image: url(./galleryImages/customerBG.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 150px 0px 50px 0px ;
-}
-@media (max-width: 1200px) {
-    .gallerySlider {
-        padding: 0px 0px 50px 0px ;
-    }
-
-}
-.slider-container1 {
-    max-width: 1400px;
-    margin: 0 auto;
-    /* position: relative; */
-    overflow: hidden;
-    padding: 0 40px;
-    margin-top: 60px;
-}
-
-.slider1 {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    gap: 80px;
-    /* justify-content: flex-start; */
-    padding-top: 10px;
-}
-
-.slide1 {
-    /* min-width: calc((100% - 40px) / 3); */
-    flex: 0 0 calc((100% - 40px) / 3);
-    /* text-align: center; */
-    border: 0.8px solid #C5AB2D;
-    border-radius: 24.14px;
-    padding: 29px;
-    max-width: 378px;
-    transition: box-shadow 0.2s ease-in-out;
-    cursor: pointer;
-}
-.slide1:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-}
-
-
-.slide-content1 {
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    justify-content: space-between;
-    height: 100%;
-
-}
-
-.starContainer img {
-    height: 23.21px;
-    width: 23.21px;
-
-}
-
-.studentDescription {
-    font-family: 'Lato', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 27.71px;
-    color: #747373;
-    margin-bottom: 30px;
-}
-
-.studentAvtar {
-    display: flex;
-    gap: 18px;
-
-}
-
-
-
-.studentAvtar h3 {
-    margin: 0;
-    color: #000000;
-    font-family: 'Lato', sans-serif;
-    font-size: 17.7px;
-    font-weight: 700;
-}
-
-.studentAvtar h6 {
-    margin: 0;
-    color: #747373;
-    font-family: 'Lato', sans-serif;
-    font-size: 12.88px;
-    font-weight: 500;
-}
-
-.nav-button1 {
-    /* position: absolute; */
-    /* top: 50%; */
-    /* transform: translateY(-50%); */
-    background: #FFFFFF;
-    border: none;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Lato', sans-serif;
-    font-size: 18px;
-    color: #333;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s;
-    z-index: 2;
-    border: 1px solid #273D66;
-    text-align: center;
-    color: #273D66;
-}
-
-.nav-button1:hover {
-    background-color: #273D66;
-    color: #fff;
-}
-
-.nav-button1:disabled {
-    background-color: rgba(255, 255, 255, 0.5);
-    cursor: not-allowed;
-    color: #999;
-}
-
-
-.servicesHeading1 {
-    font-family: 'Lato', sans-serif;
-    font-size: 60px;
-    font-weight: 500;
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-    .gallerySlider {
-        padding: 10px 0px 10px 0px ;
-    }
-    .slider-container1 {
-        padding: 0 20px;
-        margin-top: 20px;
-    }
-
-    .slide1 {
-        min-width: 100%;
-        flex: 0 0 100%;
-        padding: 0px;
-        background-color: #f3f9eb;
-    }
-
-    .slider1 {
-        gap: 5px;
-        width: 90%;
-    }
-
-    .slide-content1 {
-        padding: 20px;
-        
-    }
-
-    .servicesHeading1 {
-        font-family: 'Lato', sans-serif;
-        font-size: 30px;
-        font-weight: 500;
-    }
-    .studentDescription {
-        line-height: 20px;
-    }
-
-    .nav-button1 {
-        height: 40px;
-        width: 40px;
-    }
-
-    .slide1 h3 {
-        font-family: 'Lato', sans-serif;
-        font-size: 16px;
-    }
-
-}
-
-@media screen and (min-width: 769px) and (max-width: 1270px) {
-    .slide-content1 {
-        padding: 20px;
-    }
-
-    .servicesHeading1 {
-        font-family: 'Lato', sans-serif;
-        font-size: 50px;
-        font-weight: 500;
-    }
-
-    .nav-button1 {
-        height: 50px;
-        width: 50px;
-    }
-
-    .slider-container1 {
-        padding: 0px;
-    }
-
-    .slider1 {
-        gap: 20px;
-        padding: 20px;
-    }
-
-    .slide1 {
-        min-width: calc((100% - 40px) / 3);
-        padding: 20px;
-    }
+.map {
+    margin-top: -70px;
+    position: absolute;
+    width: 100%;
+    /* z-index: -1; */
+    height: 800px;
 }
 
 /* Contact */
 .contact-wrapper {
     position: relative;
-    margin: 40px auto;
+    margin-top: 400px;
+    margin-bottom: 100px;
     /* padding: 20px; */
 }
+.formTitle {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+
 
 .contact-form {
     background: white;
     padding: 30px 30px 50px 30px;
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    width: 79%;
+    width: 78%;
     margin-right: auto;
 }
 .contact-form form{
@@ -582,11 +249,25 @@
     transform: translateY(-50%);
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
-.formTitle {
-    font-size: 60px;
-    font-weight: 700;
+
+@media (max-width: 1400px) {
+    .contact-wrapper {
+        margin-top: 300px;
+        margin-bottom: 80px;
+    }
+    .map {
+        height: 700px;
+    }
 }
+
 @media (max-width: 768px) {
+    .contact-wrapper {
+        margin-top: 200px;
+        margin-bottom: 60px;
+    }
+    .map {
+        height: 600px;
+    }
     .formTitle {
         font-size: 40px;
         font-weight: 700;
@@ -594,12 +275,15 @@
 }
 
 @media (max-width: 480px) {
+    .contact-wrapper {
+        margin-top: 100px;
+        margin-bottom: 40px;
+    }
     .formTitle {
         font-size: 30px;
         font-weight: 700;
     }
 }
-
 @media (max-width: 991px) {
     .contact-form {
         width: 100%;
@@ -623,6 +307,7 @@
     .contact-wrapper {
         padding: 0px;
     }
+
 }
 
 .contact-info a {
