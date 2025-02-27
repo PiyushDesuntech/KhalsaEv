@@ -238,13 +238,13 @@ body {
     margin-bottom: 20px; 
     color: #fff;
 }
-/* .product-title {
+.product-title1 {
     text-align: center;
     font-weight: 700;
     color: #000000;
     font-size: 60px; 
     margin-bottom: 20px;
-} */
+}
 .titlePara {
     color: #494949;
     font-weight: 500;
@@ -257,9 +257,9 @@ body {
     .mission-title  {
         font-size: 50px;
     }
-    /* .product-title {
+    .product-title1 {
         font-size: 50px;
-    } */
+    }
     .titlePara {
         font-size: 18px;
     }
@@ -270,10 +270,10 @@ body {
         font-size: 40px;
         margin-bottom: 10px;
     }
-    /* .product-title {
+    .product-title1 {
         font-size: 40px;
         margin-bottom: 10px;
-    } */
+    }
     .titlePara {
         font-size: 16px;
     }
@@ -284,10 +284,10 @@ body {
         font-size: 30px;
         margin-bottom: 0px;
     }
-    /* .product-title {
+    .product-title1 {
         font-size: 30px;
         margin-bottom: 0px;
-    } */
+    }
     .titlePara {
         font-size: 14px;
     }
