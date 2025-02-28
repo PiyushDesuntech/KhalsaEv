@@ -57,7 +57,7 @@ body {
     background-color: #059669;
 }
 .icon-btn .iconify {
-    font-size: 20px;
+    font-size: 26px;
 }
 
 
@@ -155,6 +155,19 @@ body {
     opacity: 0.5;
     cursor: not-allowed;
   }
+
+  .nav-link:hover {
+    text-decoration: underline;
+    text-decoration-color: #04A652;
+    text-underline-offset: 26px; 
+    text-decoration-thickness: 2px; 
+}
+.nav-link.active {
+    text-decoration: underline;
+    text-decoration-color: #04A652;
+    text-underline-offset: 26px; 
+    text-decoration-thickness: 2px; 
+}
   
 @media (max-width: 991.98px) {
     .navbar-collapse {
@@ -183,6 +196,16 @@ body {
       .hero-container {
         padding-top: 20px;
        flex-wrap: wrap;
+    }
+    .nav-link:hover {
+        text-decoration: underline;
+        text-decoration-color: #04A652;
+        text-underline-offset: 10px; 
+    }
+    .nav-link.active {
+        text-decoration: underline;
+        text-decoration-color: #04A652;
+        text-underline-offset: 10px; 
     }
     }
     @media (min-width: 900px) and (max-width: 1200px) {

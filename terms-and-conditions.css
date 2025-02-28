@@ -1,12 +1,7 @@
 body {
-    font-family: Arial, sans-serif;
-  }
-
-  :root {
-    --primary-green: #00B67A;
-    --primary-blue: #1a237e;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
 }
-
 .top-bar {
     background: #000619;
     padding: 13.5px 0;
@@ -89,23 +84,6 @@ body {
     width: 100%;
     border-radius: 0px 0px 50px 50px;
 }
-.hero {
-    background-image: url(./images/distBG.svg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 545px;
-    border-radius:0px 0px 50px 50px;
-    color: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
-}
-.aboutCompany {
-    padding: 30px 0px;
-}
 
 .nav-link:hover {
     text-decoration: underline;
@@ -178,317 +156,146 @@ body {
     }
 }
 
-/* Extra small screens */
-@media (max-width: 480px) {
-    .featureMainTitle {
-        font-size: 30px;
-    }
-    .hero {
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        min-height: 245px;
-        border-radius:0px 0px 50px 50px;
-        color: #FFFFFF;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-}
-.product-title {
-    text-align: center;
-    font-weight: 700;
-    color: #000000;
-    font-size: 60px; 
-    margin-bottom: 20px;
-}
-.mission-title {
-    font-weight: 700;
-    font-size: 60px; 
-    margin-bottom: 20px; 
-    color: #FFFFFF;
-}
 
 
-/* Medium screens (tablets) */
 
-@media (max-width: 992px) {
-    .product-title {
-        font-size: 50px;
-    }
-    .mission-title  {
-        font-size: 50px;
-    }
 
-}
 
-/* Small screens (phones) */
+/* Small screens (mobile devices) */
 @media (max-width: 768px) {
-    .product-title {
+    .nav-bg{
+        display: none;
+    }
+    .social-icons1 {
+        display: block;
+    }
+    .logoBG {
+        display: none;
+    }
+    .navbarHomeIcon {
+        display: none;
+    }
+    .input-divider {
+        display: none;
+    }
+    .featureMainTitle {
         font-size: 40px;
-        margin-bottom: 10px;
-    }
-    .mission-title  {
-        font-size: 40px;
-        margin-bottom: 10px;
+        text-align: center;
     }
 }
 
-
-/* Extra small screens */
-@media (max-width: 576px) {
-    .product-title {
-        font-size: 30px;
-        margin-bottom: 0px;
-    }
-    .mission-title  {
-        font-size: 30px;
-        margin-bottom: 0px;
-    }
+h1 {
+    font-size: 80px;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
 }
-
-  
-  .search-container {
-    /* max-width: 1200px; */
-    margin: 0 auto 30px;
-  }
-  
-  .search-box {
-    position: relative;
-  }
-  
-  .search-icon {
-    position: absolute;
-    /* left: 15px; */
-    top: 50%;
-    transform: translateY(-50%);
-    color: #fff;
-    font-size: 20px;
-    background-color: #00A758;
-    height: 100%;
-    width: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    border-radius: 7.73px 0 0 7.73px;
-  }
-  
-  .search-input {
-    padding-left: 65px;
-    border-radius: 7.73px;
-    border: 1px solid #ced4da;
-    height: 50px;
-  }
-  
-  .dealer-container {
-    /* max-width: 1200px; */
-    margin: 0 auto;
-  }
-  
-  .dealer-card {
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
-    height: 100%;
-    transition: transform 0.2s;
-  }
-  
-  .dealer-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  }
-  
-  .dealer-title {
-    color: #3a549a;
-    font-weight: bold;
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-  }
-  
-  .dealer-badge {
-    background-color: #343a40;
-    color: white;
-    font-size: 0.8rem;
-    padding: 4px 10px;
-    border-radius: 4px;
-    display: inline-block;
-    margin-bottom: 15px;
-  }
-  
-  .coco-badge {
-    background-color: #198754;
-  }
-  
-  .dealer-location {
-    display: flex;
-    margin-bottom: 10px;
-    color: #212529;
-    font-size: 0.9rem;
-    align-items: first baseline;
-  }
-  
-  .dealer-location i {
-    margin-right: 10px;
-    color: #212529;
-    min-width: 15px;
-  }
-  
-  .dealer-state {
-    display: flex;
-    align-items: center;
-    color: #212529;
-    font-size: 0.9rem;
-  }
-  
-  .dealer-state i {
-    margin-right: 10px;
-  }
-  
-  .no-results {
-    text-align: center;
-    padding: 50px;
-    color: #212529;
-  }
-
-  /* Contact */
-.contactBackground {
-    background: url(./images/formBG.svg);
-     background-size: cover;background-position: center;
-    width: 100%;
-    padding-bottom: 10px;
-    padding-top: 50px;
-}
-
-.contact-wrapper {
-    position: relative;
-    margin: 40px auto;
-    /* padding: 20px; */
-}
-
-.contact-form {
-    background: white;
-    padding: 30px 30px 50px 30px;
-    border-radius: 20px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    width: 79%;
-    margin-right: auto;
-}
-.contact-form form{
-    width: 80%;
-}
-.text-muted {
-    max-width: 80%;
-}
-
-.contact-info {
-    background: #00A758;
-    color: white;
-    padding: 30px;
-    border-radius: 60px;
-    position: absolute;
-    width: 35%;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
-}
-.formTitle {
+h2 {
     font-size: 60px;
     font-weight: 700;
+    text-align: center;
+    margin: 3rem 0 7rem;
 }
+h3 {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 2rem 0 1rem;
+}
+.content-section {
+    padding: 20px 0;
+}
+.content-section p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-size: 18px;
+    font-weight: 500;
+    color: #4B4B4B;
+}
+.content-section ul li{
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-size: 18px;
+    font-weight: 500;
+    color: #4B4B4B;
+}
+
+/* Medium screens (Tablets) */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 60px;
+    }
+    h2 {
+        font-size: 50px;
+        margin: 3rem 0 4rem;
+    }
+    h3 {
+        font-size: 26px;
+    }
+    .content-section p {
+        font-size: 16px;
+    }
+    .content-section ul li {
+        font-size: 16px;
+    }
+}
+
+/* Small screens (Phones) */
 @media (max-width: 768px) {
-    .formTitle {
+    h1 {
+        font-size: 50px;
+    }
+    h2 {
         font-size: 40px;
-        font-weight: 700;
+        margin: 2rem 0 4rem;
     }
-}
-
-@media (max-width: 480px) {
-    .formTitle {
-        font-size: 30px;
-        font-weight: 700;
+    h3 {
+        font-size: 22px;
     }
-}
-
-@media (max-width: 991px) {
-    .contactBackground {
-        padding-bottom: 10px;
-        padding-top: 10px;
+    .content-section {
+        padding: 15px 0;
     }
-    .contact-form {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-    .contact-form form{
-        width: 100%;
-    }
-    .text-muted {
-        max-width: 100%;
+    .content-section p {
+        font-size: 14px;
         text-align: justify;
     }
-    
-    .contact-info {
-        position: static;
-        width: 100%;
-        transform: none;
-        margin-top: 20px;
-        border-radius: 20px;
-    }
-    .contact-wrapper {
-        padding: 0px;
+    .content-section ul li {
+        font-size: 14px;
+        text-align: justify;
     }
 }
 
-.contact-info a {
-    color: white;
+/* Extra small screens */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 40px;
+    }
+    h2 {
+        font-size: 30px;
+        margin: 1rem 0 2rem;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    .content-section {
+        padding: 10px 0;
+    }
+    .content-section p {
+        font-size: 12px;
+    }
+    .content-section ul li{
+        font-size: 12px;
+    }
+}
+
+.content-section a {
+    color: #0D6192;
     text-decoration: none;
 }
-
-.contact-info .info-item {
-    margin-bottom: 20px;
-    padding: 15px;
-    background: #057D44;
-    border-radius: 5px;
-    display: flex;
-    gap: 20px;
-    align-items: center;
+.content-section a:hover {
+    text-decoration: underline;
 }
 
-.social-icons {
-    position: relative;
-    z-index: 4;
-}
 
-.social-icons a {
-    margin-right: 15px;
-    font-size: 24px;
-    color: #81D3AD;
-}
-.social-icons a:hover {
-    color: #FFF;
-}
-
-.btn-submit {
-    background-color: #00A758;
-    color: white;
-    padding: 10px 30px;
-}
-
-.btn-submit:hover {
-    background-color: #057D44;
-    color: white;
-}
-
-.error-message {
-    color: red;
-    font-size: 0.8em;
-    margin-top: 5px;
-    display: none;
-}
-
-  /* Footer */
+/* Footer */
 .footer {
     background: url(./images/footerBG.svg); background-size: cover;background-position: center;
     width: 100%;

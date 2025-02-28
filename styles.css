@@ -54,7 +54,7 @@
     background-color: #059669;
 }
 .icon-btn .iconify {
-    font-size: 20px;
+    font-size: 26px;
 }
 
 
@@ -84,6 +84,18 @@
     align-items: center;
     width: 100%;
 }
+.nav-link:hover {
+    text-decoration: underline;
+    text-decoration-color: #04A652;
+    text-underline-offset: 26px; 
+    text-decoration-thickness: 2px; 
+}
+.nav-link.active {
+    text-decoration: underline;
+    text-decoration-color: #04A652;
+    text-underline-offset: 26px; 
+    text-decoration-thickness: 2px; 
+}
 @media (max-width: 991.98px) {
     .navbar-collapse {
         position: fixed;
@@ -108,6 +120,18 @@
       .navbar-nav {
         margin-top: 2rem;
       }
+      .nav-link:hover {
+        text-decoration: underline;
+        text-decoration-color: #04A652;
+        text-underline-offset: 10px; 
+        text-decoration-thickness: 2px; 
+    }
+    .nav-link.active {
+        text-decoration: underline;
+        text-decoration-color: #04A652;
+        text-underline-offset: 10px; 
+        text-decoration-thickness: 2px;  
+    }
     }
     @media (min-width: 900px) and (max-width: 1200px) {
         .navbar-nav .nav-link {
@@ -123,6 +147,9 @@
     /* min-height: 80vh; */
     overflow: hidden;
     padding-bottom: 50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 .hero-background {
@@ -444,6 +471,8 @@
  
     .hero-background {
         background-size: cover;
+        margin-top: -10px;
+        padding-top: 40px;
     }
     .hero-background::before {
         content: "";

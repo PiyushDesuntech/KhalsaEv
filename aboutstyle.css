@@ -54,7 +54,7 @@
     background-color: #059669;
 }
 .icon-btn .iconify {
-    font-size: 20px;
+    font-size: 26px;
 }
 
 
@@ -139,6 +139,18 @@
     max-width: 500px;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.412);
 }
+.nav-link:hover {
+    text-decoration: underline;
+    text-decoration-color: #04A652;
+    text-underline-offset: 26px; 
+    text-decoration-thickness: 2px; 
+}
+.nav-link.active {
+    text-decoration: underline;
+    text-decoration-color: #04A652;
+    text-underline-offset: 26px; 
+    text-decoration-thickness: 2px; 
+}
 @media (max-width: 991.98px) {
     .navbar-collapse {
         position: fixed;
@@ -163,6 +175,18 @@
       .navbar-nav {
         margin-top: 2rem;
       }
+      .nav-link:hover {
+        text-decoration: underline;
+        text-decoration-color: #04A652;
+        text-underline-offset: 10px; 
+        text-decoration-thickness: 2px; 
+    }
+    .nav-link.active {
+        text-decoration: underline;
+        text-decoration-color: #04A652;
+        text-underline-offset: 10px; 
+    } 
+      
     }
     @media (min-width: 900px) and (max-width: 1200px) {
         .navbar-nav .nav-link {
