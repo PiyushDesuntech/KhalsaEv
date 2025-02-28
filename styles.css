@@ -156,7 +156,7 @@
     width: 100%;
     background-position: center;
     transition: opacity 0.2s ease-in-out;
-    padding: 20px 20px 10px 20px;
+    padding: 20px 50px 10px 50px;
     border-radius: 0px 0px 40px 40px;
     display: flex;
     flex-direction: column;
@@ -472,7 +472,7 @@
     .hero-background {
         background-size: cover;
         margin-top: -10px;
-        padding-top: 40px;
+        padding: 40px 0px 10px 0px;
     }
     .hero-background::before {
         content: "";
