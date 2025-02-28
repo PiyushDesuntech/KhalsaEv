@@ -5,7 +5,7 @@
 
 .top-bar {
     background: #000619;
-    padding: 8.5px 0;
+    padding: 13.5px 0;
 }
 .social-icons1 {
     position: relative;
@@ -64,12 +64,11 @@
 }
 .nav-bg {
     position: absolute;
-    left: 0;
+    left: -42px;
     top: 0;
     z-index: 2;
-    height: 118px;
+    height: 140px;
 }
-
 .navbar-brand img {
     position: relative;
     height: 45px;
