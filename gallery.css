@@ -775,6 +775,17 @@
     transition: all 0.1s ease;
 }
 
+.footer-section ul li a.active {
+    color: #ffffff; 
+}
+
+.footer-section ul li a.active::after {
+    content: "→";
+    position: absolute;
+    left: -20px;
+    color: #ffffff;
+}
+
 .footer-bottom-text {
     padding-top: 20px;
     color: #909090;

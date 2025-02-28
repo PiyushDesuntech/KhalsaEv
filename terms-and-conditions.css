@@ -401,6 +401,9 @@ h3 {
 .footer-bottom-links a:hover {
     color: #FFF;
 }
+.footer-bottom-links a.active {
+    color: #FFF;
+}
 .linkContainer{
     display: flex; justify-content: space-between; flex-wrap: wrap; width: 100%; flex-direction: row; align-items: center;
       border-top: 0.83px solid rgba(255, 255, 255, 0.1);
