@@ -91,9 +91,10 @@ body {
 }
 
 .navbar-brand img {
-    position: relative;
-    height: 45px;
+    position: absolute;
+    height: 55px;
     z-index: 4;
+    top: 10px
 }
 .navbarHomeIcon {
     display: flex;
@@ -103,6 +104,7 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    padding: 7px;
     border-radius: 0px 0px 50px 50px;
 }
 .hero {
