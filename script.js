@@ -29,21 +29,21 @@ const content = [
         title: "Eco-Friendly",
         title1: " EV Rickshaw",
         description: "Experience eco-friendly travel with Khalsa EV's 'Book Your Ride' service. Enjoy smooth, efficient transportation powered by clean energy.",
-        image: "./images/auto1.svg",
+        image: "./images/auto1.gif",
         background: "./images/BG.svg"
     },
     {
         title: "Modern ",
         title1: "Electric Vehicle",
         description: "Discover the future of transportation with our advanced electric vehicles. Safe, reliable, and environmentally conscious.",
-        image: "./images/auto1.svg",
+        image: "./images/auto1.gif",
         background: "./images/BG.svg"
     },
     {
         title: "Zero ",
         title1: "Emission Vehicle",
         description: "Join the green revolution with our zero-emission vehicles. Perfect for urban mobility while protecting our environment.",
-        image: "./images/auto1.svg",
+        image: "./images/auto1.gif",
         background: "./images/BG.svg"
     }
 ];
